@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="PersonApp">
+<head>
+    <title>Route Provider</title>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="module.js"></script>
+    <script src="controller/homeController.js"></script>
+    <script src="controller/personController.js"></script>
+    <script src="controller/listPersons.js"></script>
+    <script src="controller/serviceController.js"></script>
+    <script src="controller/aboutUsController.js"></script>
+    <script src="controller/contactUsController.js"></script>
+
+</head>
+<body>
+    <div>
+        <a href="#home">Home</a> &nbsp;&nbsp;&nbsp;
+        <a href="#person">Person</a> &nbsp;&nbsp;&nbsp;
+        <a href="#service">Service</a> &nbsp;&nbsp;&nbsp;
+        <a href="#about">About Us</a> &nbsp;&nbsp;&nbsp;
+        <a href="#contact">Contact Us</a>
+    </div>
+    <br>
+    <div ng-view></div>
+</body>
+</html>

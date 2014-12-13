@@ -1,0 +1,25 @@
+<div>
+
+    {{ params }}
+    <div> <!--ng-controller="newPersonController"-->
+        <input type="hidden" ng-model="newPerson.id"/>
+        <input type="text" ng-model="newPerson.name" placeholder="Your Name"/><br>
+        <input type="text" ng-model="newPerson.email" placeholder="Your Email"/><br>
+        <input type="text" ng-model="newPerson.city" placeholder="Your City"/><br>
+        <button ng-click="addPerson(newPerson)" id="btnAdd">Add</button>&nbsp;&nbsp;&nbsp;
+        <button ng-click="savePerson(newPerson)" id="btnSave">Save</button>
+
+    </div>
+    <div > <!--ng-controller="listPerson"-->
+            <table style="border-collapse: collapse">
+                <tr ng-repeat="person in persons" ng-class="{'isSelected' : newPerson.id == person.id}">
+                    <td>{{ person.id }}</td>
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.email }}</td>
+                    <td>{{ person.city }}</td>
+                    <td> &nbsp; <button ng-click="editPerson(person.id)">Edit</button> &nbsp; <button ng-click="deletePerson(person.id)">Delete</button></td><!--<a href="#" ng-click="editPerson(person.id)">Edit</a> &nbsp; || &nbsp; <a href="#" ng-click="deletePerson(person.id)">Delete</a>-->
+                </tr>
+            </table>
+    </div>
+
+</div>
